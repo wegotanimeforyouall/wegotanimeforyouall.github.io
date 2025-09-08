@@ -1,30 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WeGotAnimeForYouAll</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
+
   <header>
-    <div class="logo" onclick="window.location.href='index.html'">
+    <a href="index.html" id="logo" class="logo-link" title="WeGotAnimeForYouAll - Home">
       <h1>WeGotAnimeForYouAll</h1>
-    </div>
-    <input type="text" id="searchBar" placeholder="Search anime..." />
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      <div class="logo-images">
+
+        <img src="assets/thumb1.jpg" alt="thumb1" />
+        <img src="assets/thumb2.jpg" alt="thumb2" />
+        <img src="assets/thumb3.jpg" alt="thumb3" />
+      </div>
+    </a>
   </header>
 
-  <nav id="sideMenu" class="side-menu">
-    <a href="#">Login / Sign up</a>
-    <a href="mailto:wegotanimeforyouall@gmail.com">Contact Us</a>
-    <a href="index.html">Home</a>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search anime..." autocomplete="off" />
+  </div>
+
+
+  <div class="hamburger" id="hamburger" aria-label="Open menu">☰</div>
+  <nav id="sideMenu" aria-hidden="true">
+    <div class="menu-top">
+      <button id="closeMenu" aria-label="Close menu">✕</button>
+    </div>
+    <div class="menu-items">
+      <div class="menu-item">
+        <strong>Account</strong>
+        <div class="account-actions">
+          <button id="loginBtn">Login with Google (optional)</button>
+          <button id="logoutBtn" style="display:none">Logout</button>
+        </div>
+      </div>
+      <a class="menu-link" href="mailto:wegotanimeforyouall@gmail.com">Contact Us</a>
+    </div>
   </nav>
 
-  <main id="animeGrid">
-    <!-- Add anime cards here -->
+
+  <main id="animeGrid" aria-live="polite">
+
   </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <small>Made with ❤️ — WeGotAnimeForYouAll</small>
+  </footer>
+
 </body>
 </html>
